@@ -28,8 +28,8 @@
 
   I made this script to make my life easier at my job. As most random scripts end up getting made. So with that, I am aware that it may not be the most effiecient or the most feature rich script.
   
-  I learned powershell just for this. I chose powershell because it is pre-installed on all windows machines now, and I got tired of trying to downgrade java for the official Ubiquiti Discovery Tool
+  I learned powershell just for this, so please go easy on me if there are issues. I chose powershell because it is pre-installed on all windows machines now, and I got tired of trying to downgrade java for the official Ubiquiti Discovery Tool
   
   that was abandoned. Powershell allowed me to just drop the files on any computer and have it work right away without needing to download or install any other programs. Which sometimes the machines I
   
-  need the tool on do not have internet, making install some programs more difficult. Thats about it as to why I made this darn thing.
+  need the tool on do not have internet, making the install some programs more difficult. Thats about it as to why I made this darn thing.
