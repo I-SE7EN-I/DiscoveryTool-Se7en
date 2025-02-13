@@ -5,6 +5,35 @@
   
   data manipulation if you have large networks you want to sort or filter. (Similar some of the features of UISP can but local and doesn't require internet)
 
+#--Example Output
+  -Discovery Complete
+  -Devices found: 3
+  [2025-02-13 15:12:01]
+  ------------------------------
+  -Unit Name:      Point-to-point 1
+  -Wan Ip Address: 192.168.1.15
+  -Mac Address:    12:34:56:12:34:56
+  -Connected Ptp:  Outdoor-Feed
+  -Unit Model:     LBE-5AC-Gen2
+  -Unit Firmware:  WA.ar934x.v8.7.11.46972.220614.0420
+  ------------------------------
+  ------------------------------
+  -Unit Name:      Point-to-point 2
+  -Wan Ip Address: 192.168.1.16
+  -Mac Address:    65:43:21:65:43:21
+  -Connected Ptp:  Outdoor-Feed
+  -Unit Model:     LBE-5AC-Gen2
+  -Unit Firmware:  WA.ar934x.v8.7.11.46972.220614.0420
+  ------------------------------
+  ------------------------------
+  -Unit Name:      EdgeSwitch X
+  -Wan Ip Address: 192.168.1.1
+  -Mac Address:    16:25:34:16:25:34
+  -Connected Ptp:
+  -Unit Model:     ES-10XP
+  -Unit Firmware:  ES.rtl838x.v1.2.1.0.200408.1353
+  ------------------------------
+
 
 #--What to look out for
 
