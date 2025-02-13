@@ -3,7 +3,7 @@
   
   The .txt files can be useful for saving all the devices at a location so that the IPs, Names, and Macs can be viewed from a central location. The .csv can be useful for 
   
-  data manipulation if you have large networks you want to sort or filter. (Similar some of the features of UISP can but local and doesn't require internet)
+  data manipulation if you have large networks you want to sort or filter. (Similar to some of the features of UISP, but local and doesn't require internet)
 
 #--Example Output
 ```
