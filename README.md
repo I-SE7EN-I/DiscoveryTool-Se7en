@@ -14,12 +14,12 @@
   
   I only had 2 units to test with so unlike the ubiquiti where I have tested it on close to 1000 units, the cambium is not near as tested and may not function as well. I also know there is a better
   
-  way to make the cambium discovery work, however it required download extra resources, which I was trying to avoid across this entire project.
+  way to make the cambium discovery work, however it required downloading extra resources, which I was trying to avoid across this entire project.
 
 
 #--How to edit
 
-  The Update Tool checks the hash of the two files. Meaning that if you change anything it will think that there is an update or needs repair. To make edits you need to edit the run file and-
+  The Update Tool checks the hash of the two files (For both the main tool and updater). Meaning that if you change anything it will think that there is an update or needs repair. To make edits you need to edit the run file and-
   
   swap the comments to run the powershell script directly. This will skip the updates/repairs entirely.
 
