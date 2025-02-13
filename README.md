@@ -6,6 +6,7 @@
   data manipulation if you have large networks you want to sort or filter. (Similar some of the features of UISP can but local and doesn't require internet)
 
 #--Example Output
+```
   -Discovery Complete
   -Devices found: 3
   [2025-02-13 15:12:01]
@@ -33,7 +34,7 @@
   -Unit Model:     ES-10XP
   -Unit Firmware:  ES.rtl838x.v1.2.1.0.200408.1353
   ------------------------------
-
+```
 
 #--What to look out for
 
