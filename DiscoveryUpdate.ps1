@@ -13,18 +13,12 @@ $oldUpdatesFolder = "$PSScriptRoot\Old Updates"
 # Function to check internet connectivity
 function Test-Internet {
     try {
-        $tcp = New-Object System.Net.Sockets.TcpClient
-        $async = $tcp.BeginConnect("1.1.1.1", 443, $null, $null)
-        if ($async.AsyncWaitHandle.WaitOne(750, $false)) { # Timeout in milliseconds
-            $tcp.Close()
-            return $true
-        } else {
-            $tcp.Close()
-            return $false
-        }
+        $response = Invoke-WebRequest -Uri "https://1.1.1.1" -UseBasicParsing -TimeoutSec 3
+        return $true
     } catch {
         return $false
     }
+
 }
 
 # Exit if no internet
