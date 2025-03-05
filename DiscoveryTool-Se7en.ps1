@@ -22,36 +22,6 @@ $host.UI.RawUI.BackgroundColor = "Black"
 $host.UI.RawUI.ForegroundColor = "White"
 Clear-Host
 
-# Check if running as administrator
-if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
-
-	$continue = $true
-
-	while ($continue) {
-		$adminChoice = ""
-		$userinput = Read-Host "`nWould you like to restart in administration mode? (Required for the script to edit this machines IP)
-		`n[1]No
-		`n[2]Yes
-		`n"
-
-		switch ($userinput) {
-			{ $_ -in "2", "y", "yes" } { $adminChoice = "yes"; $continue = $false }
-			{ $_ -in "1", "n", "no", "" } { $adminChoice = "no"; $continue = $false }
-			default { Write-Host "Unknown command" }
-		}
-	}
-	# Relaunch the script with admin privileges  |  powershell = ps5  |  pwsh = ps7+
-	if ($adminChoice -eq "yes") {
-		Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-#		Start-Process pwsh -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
-		exit
-	}
-	else {
-		$continue = $true
-		Clear-Host
-	}
-}
-
 function Get-Time {
 	param (
 		[string]$message
@@ -679,7 +649,37 @@ function SIP {
 }
 
 # Set the IP Address of Machine
-function Set-Ip {	
+function Set-Ip {
+# Check if running as administrator
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+
+	$continue = $true
+
+	while ($continue) {
+		$adminChoice = ""
+		$userinput = Read-Host "`nWould you like to restart in administration mode? (Required for the script to edit this machines IP)
+		`n[1]No
+		`n[2]Yes
+		`n"
+
+		switch ($userinput) {
+			{ $_ -in "2", "y", "yes" } { $adminChoice = "yes"; $continue = $false }
+			{ $_ -in "1", "n", "no", "" } { $adminChoice = "no"; $continue = $false }
+			default { Write-Host "Unknown command" }
+		}
+	}
+	# Relaunch the script with admin privileges  |  powershell = ps5  |  pwsh = ps7+
+	if ($adminChoice -eq "yes") {
+		Start-Process powershell -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+#		Start-Process pwsh -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs
+		exit
+	}
+	else {
+		$continue = $true
+		Clear-Host
+	}
+}
+
 	# Show available network adapters with Out-GridView for selection
 	$selectedAdapter = Get-NetAdapter | Out-GridView -Title "Select a Network Adapter" -PassThru
 	if ($null -eq $selectedAdapter) {
