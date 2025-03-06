@@ -675,8 +675,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 		exit
 	}
 	else {
-		$continue = $true
-		Clear-Host
+		break
 	}
 }
 
