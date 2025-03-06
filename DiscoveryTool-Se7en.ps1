@@ -825,7 +825,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 # Main Menu
 $continue = $true
 while ($continue) {
-	$userinput = Read-Host "`nWhat would you like to do? `n[1] 'Scan (Ubiquiti)' `n[2] 'Scan (Cambium)' `n[3] 'Tcp-Ip Setup' `n[4] 'SSH' `n[5] 'Exit'`n`n"
+	$userinput = Read-Host "What would you like to do? `n[1] 'Scan (Ubiquiti)' `n[2] 'Scan (Cambium)' `n[3] 'Tcp-Ip Setup' `n[4] 'SSH' `n[5] 'Exit'`n`n"
 
 	switch ($userinput) {
 		{ $_ -in "1", "" } { Start-Ubi-Discovery }
