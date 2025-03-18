@@ -266,7 +266,7 @@ function Start-Ubi-Discovery {
 		}
 
 		if ($outputChoice -eq "graph") {
-			$filteredDevices | Out-GridView
+			$filteredDevices | Out-GridView -Title "Found Devices: $($filteredDevices.Count)"
 		}
 
 		if ($outputChoice -eq "textdocument" -or $outputChoice -eq "both") {
@@ -502,7 +502,7 @@ function Start-Cam-Discovery {
 		}
 
 		if ($outputChoice -eq "graph") {
-			$filteredDevices | Out-GridView
+			$filteredDevices | Out-GridView -Title "Found Devices: $($filteredDevices.Count)"
 		}
 
 		if ($outputChoice -eq "textdocument" -or $outputChoice -eq "both") {
